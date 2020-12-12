@@ -13,7 +13,7 @@ class SiteOrtolookAdm:
 
     def __init__(self):
         self.site = Chrome()
-        
+
     def clicar(self,xpath):
         while True:
             try:
@@ -26,7 +26,7 @@ class SiteOrtolookAdm:
 
     def formulario(self,xpath,texto):
         while True:
-            try:  
+            try:
                 self.formulariovar = self.site.find_element_by_xpath(xpath)
                 self.formulariovar.clear()
                 time.sleep(1)
@@ -121,8 +121,8 @@ if __name__ == "__main__":
         fim = datas[1][:8]
 
     #Preenchimento e email e senha
-    email = 'odontologiafinanceiro@gmail.com'
-    senha = 'saoconra'
+    email = '***@gmail.com'
+    senha = 'xxx'
 
     browser.formulario(caminhos['username'],email)
     browser.formulario(caminhos['password'],senha)
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     browser.clicar(caminhos['financeiro'])
 
     #Clicar em "Pagamentos"
-    browser.clicar(caminhos['pagamentos'])    
+    browser.clicar(caminhos['pagamentos'])
     time.sleep(1)
 
 

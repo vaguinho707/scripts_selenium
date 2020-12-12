@@ -37,7 +37,7 @@ if __name__ == "__main__":
     }
 
 
-    URL = 'http://adm.dttsistemas.com.br/pages/autenticacao.xhtml'
+    URL = 'http://adm.eauhekdkfaja.com.br/pages/autenticacao.xhtml'
     downloadPath = r'C:\Users\Rafael\Documents\Planilhas - Dentistas'
     browser = SiteOrtolookAdm()
     options = browser.defineDownloadPath(downloadPath)
@@ -55,8 +55,8 @@ if __name__ == "__main__":
         fim = datas[1][:8]
 
     #Preenchimento e email e senha
-    email = 'odontologiafinanceiro@gmail.com'
-    senha = 'saoconra'
+    email = '***@gmail.com'
+    senha = 'xxx'
 
     browser.formulario(caminhos['username'],email)
     browser.formulario(caminhos['password'],senha)
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     #Clicar em "Analítico - Dentista"
     browser.clicar(caminhos['analiticoDentista'])
 
-    
+
 
     #Clicar para listar Franquias
     browser.clicar(caminhos['listarFranquias'])
@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
     #Selecionar formato XLSX
     browser.clicar(caminhos['formatoXLSX'])
-    
+
     #Clicar para Listar Clínicas
     browser.clicar(caminhos['listarClinicas'])
 
@@ -114,9 +114,9 @@ if __name__ == "__main__":
     #Clicar em "Gerar Relatório"
     browser.clicar(caminhos['gerarRelatorio'])
     time.sleep(3)
-    
+
     os.chdir(downloadPath)
-    
+
     renameStatus = False
     while (renameStatus == False):
         try:
@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
        	nomeClinica = SiteOrtolookAdm.getKey(caminhos,item)
        	print(nomeClinica)
-        
+
         renameStatus = False
 
         while (renameStatus == False):
@@ -154,5 +154,3 @@ if __name__ == "__main__":
                 renameStatus = True
             except:
                 pass
-
-

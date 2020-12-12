@@ -64,22 +64,22 @@ if __name__ == "__main__":
     }
 
     dictCNPJClinicas = {
-		'ALCANTARA': '32814593000116',
-		'BOTAFOGO': '34445861000103',
-		'CAXIAS': '30530509000107',
-		'CAXIAS 2': '34298866000142',
-		'LEBLON': '00000000000102',
-		'MADUREIRA': '35660946000169',
-		'NITEROI':'28697866000112',
-		'NOVA IGUACU':'05806879000187',
-		'SAO GONCALO': '06271306000169'
+		'ALCANTARA': '3281459',
+		'BOTAFOGO': '3444586',
+		'CAXIAS': '3053050',
+		'CAXIAS 2': '342988',
+		'LEBLON': '000000',
+		'MADUREIRA': '3566094',
+		'NITEROI':'2869786',
+		'NOVA IGUACU':'0580687',
+		'SAO GONCALO': '0627130'
 	}
 
 
     arrayCNPJClinicas = [dictCNPJClinicas['ALCANTARA'], dictCNPJClinicas['BOTAFOGO'],dictCNPJClinicas['CAXIAS'], dictCNPJClinicas['CAXIAS 2'], dictCNPJClinicas['LEBLON'], dictCNPJClinicas['MADUREIRA'], dictCNPJClinicas['NITEROI'], dictCNPJClinicas['NOVA IGUACU'], dictCNPJClinicas['SAO GONCALO']]
 
 
-    URL = 'http://www.dttsistemas.com.br/pages/autenticacao.xhtml'
+    URL = 'http://www.sauifhiashfuia.com.br/pages/autenticacao.xhtml'
     downloadPath = r'C:\Users\Rafael\Documents\Planilhas - Clientes'
     browser = SiteOrtolookAdm()
     options = browser.defineDownloadPath(downloadPath)
@@ -102,8 +102,8 @@ if __name__ == "__main__":
         try:
 
             #Preenchimento e email e senha
-            email = 'odontologiafinanceiro@gmail.com'
-            senha = 'saoconra'
+            email = 'xxx@gmail.com'
+            senha = '***'
 
             cnpj = browser.site.find_element_by_xpath(caminhos['CNPJ'])
             for i in range(18):
@@ -244,7 +244,7 @@ if __name__ == "__main__":
             browser.clicar(caminhos['pesquisarParcelas'])
             ifLoading()
 
-            
+
             time.sleep(3)
 
             browser.clicar(caminhos['parcelasXLS'])
